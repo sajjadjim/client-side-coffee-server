@@ -52,9 +52,9 @@ const CoffeeCard = ({ coffee }) => {
                 <h2 className="card-title">Price :<span className='opacity-60'>{price}$</span></h2>
             </div>
             <div className=" grid mr-5 mt-5">
-                <Link><button onClick={() => handleDeleteProduct(coffee._id)} className="bg-red-400 h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><MdDelete className='text-white' /></button></Link>
-                <button className="bg-black h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><FaPen className='text-white' /></button>
-                <button className="bg-[#D2B48C] h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><AiFillEye className='text-white' /></button>
+                <button onClick={() => handleDeleteProduct(coffee._id)} className="bg-red-400 h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><MdDelete className='text-white' /></button>
+               <Link to={`/updateCoffeeee/${coffee._id}`}><button className="bg-black h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><FaPen className='text-white' /></button></Link> 
+                <Link to={`/coffeeDetails/${coffee._id}`}><button className="bg-[#D2B48C] h-[25px] w-[25px] rounded-sm grid items-center justify-center cursor-pointer"><AiFillEye className='text-white' /></button></Link>
             </div>
         </div>
     );

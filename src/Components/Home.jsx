@@ -14,8 +14,7 @@ const Home = () => {
                 style={{
                     backgroundImage:
                         "url(https://i.ibb.co/VcR7LTZc/3.png)",
-                }}
-            >
+                }}>
                 <div className="hero-overlay"></div>
                 <div className="hero-content text-neutral-content ">
                     <div className="md:absolute md:ml-150 md:max-w-2xl ">

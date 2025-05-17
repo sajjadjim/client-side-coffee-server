@@ -9,7 +9,8 @@ import {
 import MainLayout from './MainLayout/MainLayout.jsx';
 import Home from './Components/Home.jsx';
 import AddCoffee from './Components/AddCoffee.jsx';
-import UpdateCoffe from './Components/UpdateCoffe.jsx';
+import UpdateCoffee from './Components/UpdateCoffe.jsx';
+import CoffeeDetails from './Components/CoffeeDetails.jsx/CoffeeDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,13 @@ const router = createBrowserRouter([
       }
       ,
       {
-        path:'/updateCoffee'
-        ,Component:UpdateCoffe
+        path:'/updateCoffeeee/:id',
+        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`)
+        ,Component:UpdateCoffee
+      },{
+        path:`/coffeeDetails/:id`,
+        loader: ({params})=> fetch(`http://localhost:3000/coffees/${params.id}`),
+        Component:CoffeeDetails
       }
     ]
   },

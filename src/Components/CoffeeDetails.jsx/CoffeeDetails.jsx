@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import { useLoaderData } from 'react-router';
-
 const CoffeeDetails = () => {
+    useEffect(()=>{
+    document.title='Coffee | Details'
+})
     const { name, chef, supplier, price, taste, details, photoUrl } = useLoaderData()
     return (
         <div>

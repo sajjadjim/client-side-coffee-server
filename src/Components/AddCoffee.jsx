@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Font.css'
 import { Form } from 'react-router';
 import Swal from 'sweetalert2';
 const AddCoffee = () => {
 
+    useEffect(()=>{
+        document.title='Add | Coffee'
+    })
     const handleCoffeeAddNew = (e) => {
         e.preventDefault()
         const form = e.target

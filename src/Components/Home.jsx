@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router';
 import './Font.css'
 import { Link } from 'react-router';
 import CoffeeCard from './Coffee/CoffeeCard';
 const Home = () => {
+
+    useEffect(()=>{
+        document.title="Coffee | Shop"
+    })
     const coffees = useLoaderData()
     // console.log(coffees)
     return (

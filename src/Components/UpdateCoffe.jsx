@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import { useLoaderData } from 'react-router';
 import Swal from 'sweetalert2';
 
 const UpdateCoffee = () => {
+        useEffect(()=>{
+        document.title='Update | Details'
+    })
     const { _id, name, photoUrl, chef, price, taste, details, supplier } = useLoaderData()
     const handleUpdateCoffee = (e) => {
         e.preventDefault()

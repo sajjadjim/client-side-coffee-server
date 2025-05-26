@@ -20,7 +20,7 @@ const CoffeeCard = ({ coffee }) => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Delete Method here Data 
-                fetch(`http://localhost:3000/coffees/${id}`, {
+                fetch(`https://server-side-coffee-lake.vercel.app/coffees/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

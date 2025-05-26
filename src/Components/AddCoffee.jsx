@@ -23,7 +23,7 @@ const AddCoffee = () => {
         const coffeeData = Object.fromEntries(formData.entries())
         console.log(coffeeData)
         // Data send to the MongoDB Here code 
-        fetch('http://localhost:3000/coffees', {
+        fetch('https://server-side-coffee-lake.vercel.app/coffees', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
